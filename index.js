@@ -12,7 +12,7 @@ app.use(express.json());
 app.post("/api/evaluate", async (req, res) => {
   try {
     
-    const targetPythonUrl="https://ankitydv016-california-housing-ai.hf.space";
+    const targetPythonUrl="https://ankitydv016-california-housing-ai.hf.space/predict";
 
     console.log(
       `Forwarding payload directly to Python target: ${targetPythonUrl}`,
