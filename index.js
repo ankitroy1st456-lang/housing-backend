@@ -11,13 +11,8 @@ app.use(express.json());
 // Main route
 app.post("/api/evaluate", async (req, res) => {
   try {
-    // 1. Read the cloud variable from Render, or fall back to local 8000 port
-    const pythonUrl = process.env.PYTHON_SERVER_URL || "http://localhost:8000";
-
-    // 2. Format the URL cleanly to make sure it hits the /predict endpoint
-    const targetPythonUrl = pythonUrl.endsWith("/")
-      ? `${pythonUrl}predict`
-      : `${pythonUrl}/predict`;
+    
+    const targetPythonUrl="https://ankitydv016-california-housing-ai.hf.space";
 
     console.log(
       `Forwarding payload directly to Python target: ${targetPythonUrl}`,
